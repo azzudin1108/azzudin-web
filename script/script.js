@@ -3,12 +3,16 @@ const soal = document.querySelectorAll('.soal');
 const ekspresi = document.querySelector('#ekspresi');
 const tryAgain = document.getElementById('tryAgain');
 const nomor = document.getElementById('nomor');
+const gambar = document.querySelector('.gambar');
+const check = document.querySelector('.check');
 
 
 let point = 0;
 let noSoal = 1;
+let hasilCek = null;
 score.innerHTML = '<h2>' + point + '</h2>';
 nomor.innerHTML = noSoal;
+
 
 for (let i = 0; i < soal.length; i++) {
     soal[i].addEventListener('click', function (e) {
@@ -18,24 +22,32 @@ for (let i = 0; i < soal.length; i++) {
             }
             if (e.target.value == 1) {
                 point += 10;
+                hasilCek = true;
             } else {
                 point += 0;
+                hasilCek = false;
             }
             e.target.classList.add('clicked');
         } else if (e.target.getAttribute('type') == 'submit') {
             if (e.target.parentElement.classList.contains('last')) {
                 ekspresi.parentElement.style.display = 'flex';
                 if (point <= 30) {
-                    ekspresi.innerHTML = 'Silitttt!!!!!'
+                    ekspresi.innerHTML = 'Point kamu<br>' + point + '<br>Silitttt!!!!!'
                 } else if (point <= 50) {
-                    ekspresi.innerHTML = 'Huuuuu!!!!!';
+                    ekspresi.innerHTML = 'Point kamu<br>' + point + '<br>Huuuuu!!!!!';
                 } else if (point <= 90) {
-                    ekspresi.innerHTML = 'Belajar lagi, dekkkk!!!!!';
+                    ekspresi.innerHTML = 'Point kamu<br>' + point + '<br>Belajar lagi, dekkkk!!!!!';
                 } else {
-                    ekspresi.innerHTML = 'Waduh, Tumbennnn!!!!!';
+                    ekspresi.innerHTML = 'Point kamu<br>' + point + '<br>Waduh, Tumbennnn!!!!!';
                 }
             } else {
                 e.target.parentElement.nextElementSibling.style.display = 'flex';
+                gambar.parentElement.style.display = 'flex';
+                if (hasilCek == true) {
+                    gambar.style.backgroundImage = 'url(asset/img/true.png)';
+                } else {
+                    gambar.style.backgroundImage = 'url(asset/img/false.png)';
+                }
             }
             e.target.parentElement.style.display = 'none';
             score.innerHTML = '<h2>' + point + '</h2>';
@@ -55,4 +67,10 @@ tryAgain.addEventListener('click', function () {
     score.innerHTML = '<h2>' + point + '</h2>';
     noSoal = 1;
     nomor.innerHTML = noSoal;
+});
+
+check.addEventListener('click', function (e) {
+    if (e.target.getAttribute('id') == 'close') {
+        e.target.parentElement.style.display = 'none';
+    }
 });
