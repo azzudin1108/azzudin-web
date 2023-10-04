@@ -13,27 +13,185 @@
 
 
 <body>
+    <div class="score position-absolute text-white p-2 text-center m-1 border border-1">
+        <div class="text-score">
+            <h4>Score</h4>
+        </div>
+        <div class="point-score">
+        </div>
+    </div>
 
-    <div class="text-white" id="content">
+    <div
+        class="nomor position-absolute text-white border border-3 text-center d-flex justify-content-center align-items-center rounded-circle">
+        <h2 class="m-0" id="nomor"></h2>
+    </div>
+
+    <!-- satu -->
+    <div class="text-white soal">
         <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
-            <h2 class="m-3">Kamu sayang nggak sama aku?</h2>
+            <h2 class="m-3">Korea atau Jepang?</h2>
             <div class="answer d-flex w-100 text-white">
                 <button type="menu" value="0"
                     class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
-                    Sayang</button>
+                    Korea</button>
                 <button type="menu" value="1"
                     class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
-                    Nggak</button>
+                    Jepang</button>
             </div>
         </div>
         <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
     </div>
 
-    <div class="hore position-absolute text-white h-100 w-100 justify-content-center align-items-center flex-column"
+    <!-- dua -->
+    <div class="text-white soal" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Kaya atau Bahagia?</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    Kaya</button>
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    Bahagia</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- tiga -->
+    <div class="text-white soal" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Indonesian Pop atau Jawa Pop?</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    Indonesian Pop</button>
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    Jawa Pop</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- empat -->
+    <div class="text-white soal" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Ayam Bakar atau Kebab?</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    Ayam Bakar</button>
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    Kebab</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- lima -->
+    <div class="text-white soal" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Nonton atau Jalan?</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    Nonton</button>
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    Jalan</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- Enam -->
+    <div class="text-white soal" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Humoris atau Romantis?</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    Humoris</button>
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    Romantis</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- Tujuh -->
+    <div class="text-white soal" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Belajar coding Hoby atau Kebutuhan?</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    Hoby</button>
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    Kebutuhan</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- Delapan -->
+    <div class="text-white soal" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Anggur atau Semangka?</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    Anggur</button>
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    Semangka</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- Sembilan -->
+    <div class="text-white soal" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Angka 5 atau 7?</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    5</button>
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    7</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- Sepuluh -->
+    <div class="text-white soal last" style="display: none;">
+        <div class="container text-center p-2 border border-2 border-white rounded-3 m-3">
+            <h2 class="m-3">Bhs. Indonesia atau Matematika</h2>
+            <div class="answer d-flex w-100 text-white">
+                <button type="menu" value="0"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">A.
+                    Bhs. Indonesia</button>
+                <button type="menu" value="1"
+                    class="flex-grow-1 btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">B.
+                    Matematika</button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Kirim</button>
+    </div>
+
+    <!-- congrats -->
+    <div class="hasil position-absolute text-white h-100 w-100 justify-content-center align-items-center flex-column"
         style="display: none;">
-        <h1 class="d-block">Hore!!!!</h1>
-        <button type="menu" id="back"
-            class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Back</button>
+        <h1 class="d-block" id="ekspresi"></h1>
+        <button type="menu" id="tryAgain" class="btn btn-dark border-2 border-white m-2 fw-bold bg-transparent">Coba
+            Lagi</button>
     </div>
 
 
