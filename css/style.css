@@ -67,3 +67,15 @@ button[type=submit]:hover {
         width: 600px;
     }
 }
+
+@media (max-height:770px) {
+    .nomor {
+        top: 20%;
+    }
+}
+
+@media (max-height:492px) {
+    .nomor {
+        top: 10%;
+    }
+}

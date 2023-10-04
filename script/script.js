@@ -41,7 +41,7 @@ for (let i = 0; i < soal.length; i++) {
             score.innerHTML = '<h2>' + point + '</h2>';
             noSoal += 1;
             nomor.innerHTML = noSoal;
-            for (let a = 0; a < soal[i].querySelectorAll('button[type=menu]'); a++) {
+            for (let a = 0; a < soal[i].querySelectorAll('button[type=menu]').length; a++) {
                 soal[i].querySelectorAll('button[type=menu]')[a].classList.remove('clicked');
             }
         }
