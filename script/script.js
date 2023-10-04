@@ -22,7 +22,7 @@ for (let i = 0; i < soal.length; i++) {
             }
             if (e.target.value == 1) {
                 hasilCek = true;
-            } else {
+            } else if (e.target.value == 0) {
                 hasilCek = false;
             }
             e.target.classList.add('clicked');
@@ -44,15 +44,18 @@ for (let i = 0; i < soal.length; i++) {
                 if (hasilCek == true) {
                     point += 10;
                     gambar.style.backgroundImage = 'url(asset/img/true.png)';
-                } else {
+                } else if (hasilCek == false) {
                     point += 0;
                     gambar.style.backgroundImage = 'url(asset/img/false.png)';
+                } else {
+                    gambar.style.backgroundImage = 'url(asset/img/null.jpg)';
                 }
             }
             e.target.parentElement.style.display = 'none';
             score.innerHTML = '<h2>' + point + '</h2>';
             noSoal += 1;
             nomor.innerHTML = noSoal;
+            hasilCek = null;
             for (let a = 0; a < soal[i].querySelectorAll('button[type=menu]').length; a++) {
                 soal[i].querySelectorAll('button[type=menu]')[a].classList.remove('clicked');
             }
