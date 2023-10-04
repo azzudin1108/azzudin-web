@@ -28,6 +28,11 @@ for (let i = 0; i < soal.length; i++) {
             e.target.classList.add('clicked');
         } else if (e.target.getAttribute('type') == 'submit') {
             if (e.target.parentElement.classList.contains('last')) {
+                if (hasilCek == true) {
+                    point += 10;
+                } else {
+                    point += 0;
+                }
                 ekspresi.parentElement.style.display = 'flex';
                 if (point <= 30) {
                     ekspresi.innerHTML = 'Point kamu<br>' + point + '<br>Silitttt!!!!!'
